@@ -43,46 +43,78 @@ When the control i/p AB = 01, the upper second AND gate is permitted while the r
 If the data bit D is low, the output Y1 is low. IF data bit D is high, the output Y1 is high. The value of the output Y1 depends upon the value of data bit D, the remaining outputs are in a low state.
 
 If the control input changes to AB = 10, then all the gates are restricted except the third AND gate from the top. Then, data bit D is transmitted only to the output Y2; and, Y2 = Data. . The best example of 1X4 demultiplexer is IC 74155.
-
- 
  
 ### Procedure
-/* write all the steps invloved */
+#### step1:
+Create a project with required entities.
 
+#### step2:
+Create a module along with respective file name for both Multiplexer and De-multiplexer.
 
+#### step3:
+Run the module and get the respective RTL outputs.
+
+#### step4:
+Create university program(VWF) for getting timing diagram.
+
+#### step5:
+Give the respective inputs for timing diagram and obtain the results.
 
 ### PROGRAM 
+``` 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: C.Prabha
+RegisterNumber: 212222110032
+
+### 4-1 Multiplexer
+module mux(i0, i1, i2, i3, s0, s1, y);
+input i0, i1, i2, i3, s0, s1;
+output y;
+wire p, q, r, s, s0c, s1c;
+not(s0c, s0);
+nor(s1c, s1);
+and(p, s0c, s1c, i0);
+and(q, s0c, s1, i1);
+and(r, s0, s1c, i2);
+and(s, s0, s1, i3);
+or(y, p, q, r, s);
+endmodule
+
+### 1-4 Demultiplexer
+module demux(y0, y1, y2, y3, s0, s1, i);
+input s0, s1, i;
+output y0, y1, y2, y3;
+wire s0c, s1c;
+nor(s0c, s0);
+nor(s1c, s1);
+and(y0, i, s0c, s1);
+and(y1, i, s0c, s1c);
+and(y2, i, s0, s1c);
+and(y3, i, s0, s1);
+endmodule
 */
-
-
-
-
-
-
+```
 ### RTL LOGIC  
+#### Multiplexer:
+![multiplexer logic](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/c70d581f-bd64-440a-b680-f5ea5f1499a6)
 
-
-
-
-
-
-
+#### Demultiplexer:
+![demultiplexer](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/9ffd4d5f-1166-41f2-b07c-d626ff7d81cc)
 
 ### TIMING DIGRAMS  
+#### Multiplexer:
+![multi time](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/e4c94607-c39f-49da-a079-2b035c5a4bfe)
 
-
-
-
+#### Demultiplexer:
+![demulti time](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/3a417ceb-5a3d-408b-8b30-3f46eb384543)
 
 ### TRUTH TABLE 
+#### Multiplexer:
+![multi tt](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/b6a5bccf-c23f-4ffa-82d8-6e8d12665726)
 
-
-
-
-
+#### Demultiplexer:
+![demulti tt](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/e44d397d-97a0-4fe9-95ca-11f6a0d7b3e0)
 
 ### RESULTS 
+Thus the implementation of Multiplexer and Demultiplexer are verified.
