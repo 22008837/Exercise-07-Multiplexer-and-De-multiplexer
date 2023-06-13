@@ -107,14 +107,14 @@ endmodule
 ![multi time](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/e4c94607-c39f-49da-a079-2b035c5a4bfe)
 
 #### Demultiplexer:
-![demulti time](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/3a417ceb-5a3d-408b-8b30-3f46eb384543)
+![image](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/e77f3afb-9011-4c15-aa55-e8f6fcf3c754)
 
 ### TRUTH TABLE 
 #### Multiplexer:
 ![multi tt](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/b6a5bccf-c23f-4ffa-82d8-6e8d12665726)
 
 #### Demultiplexer:
-![demulti tt](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/e44d397d-97a0-4fe9-95ca-11f6a0d7b3e0)
+![image](https://github.com/22008837/Exercise-07-Multiplexer-and-De-multiplexer/assets/120194155/aa93eab4-a714-46ba-8a95-b3d6c319554d)
 
 ### RESULTS 
 Thus the implementation of Multiplexer and Demultiplexer are verified.
